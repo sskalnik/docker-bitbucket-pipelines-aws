@@ -1,28 +1,14 @@
-# Bitbucket Pipelines Docker Image
-
-The images built from this repo's tags are designed to speed up Pipeline execution by pre-installing common testing/deployment tools.
-
+# Bitbucket Pipelines Docker Image for Terraform projects
 
 # Master / Latest
-
-Includes:
+## Essential packages
 * [curl](https://curl.haxx.se/)
 * [git](https://git-scm.com/)
-* [jq](https://stedolan.github.io/jq/)
 * [unzip](http://www.info-zip.org/UnZip.html)
-* [Python 2 & 3](https://www.python.org/)
-* [Node.js](https://nodejs.org/)
-* [Serverless](https://serverless.com/)
-* [Terraform](https://www.terraform.io/)
-* [tfenv](https://github.com/Zordrak/tfenv)
-* [ChefDK](https://downloads.chef.io/chefdk)
-* [Pipenv](https://pypi.python.org/pypi/pipenv)
-* [AWS CLI](https://pypi.python.org/pypi/awscli)
-* [Runway](https://pypi.python.org/pypi/runway)
-* [Sceptre](https://pypi.python.org/pypi/sceptre)
-* [Stacker](https://pypi.python.org/pypi/stacker)
-* [Ansible](https://pypi.python.org/pypi/ansible)
-* [flake8](https://pypi.python.org/pypi/flake8)
-* [pydocstyle](https://pypi.python.org/pypi/pydocstyle)
-* [pylint](https://pypi.python.org/pypi/pylint)
-* [yamllint](https://pypi.python.org/pypi/yamllint)
+## bash script linting and testing
+* [ShellCheck](https://github.com/koalaman/shellcheck)
+## Terraform linting and testing
+* [tflint](https://github.com/terraform-linters/tflint)
+* [tfsec](https://github.com/liamg/tfsec/)
+## Terraform
+* [Terraform](https://www.terraform.io/) via [tf-updater](https://github.com/sskalnik/tf-updater)
