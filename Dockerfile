@@ -5,7 +5,9 @@ RUN set -xe \
 	&& yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
 	&& yum install -y epel-release \
 	&& yum install -y curl wget git unzip ShellCheck \
-	&& wget https://github.com/liamg/tfsec/releases/download/v0.21.0/tfsec-linux-amd64 -O /usr/local/bin/tfsec \
-	&& curl -L "$(curl -L https://github.com/terraform-linters/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" -o tflint.zip \
+	&& curl -L "$(curl -Ls https://api.github.com/repos/liamg/tfsec/releases/latest | grep -o -E "https://.+?linux-amd64")" -o /usr/local/bin/tfsec \
+	&& chmod +x /usr/local/bin/tfsec
+	&& curl -L "$(curl -Ls https://api.github.com/repos/terraform-linters/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" -o tflint.zip \
 	&& unzip tflint.zip && rm tflint.zip && mv tflint /usr/local/bin/tflint \
+	&& chmod +x /usr/local/bin/tflint
 	&& wget https://raw.githubusercontent.com/sskalnik/tf-updater/master/get-latest-terraform.sh -O /usr/local/bin/get-latest-terraform.sh
