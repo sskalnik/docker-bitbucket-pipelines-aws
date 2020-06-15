@@ -1,5 +1,3 @@
-version: '2'
-
 sut:
   build: .
   command: which wget && which curl && which git && which unzip && which terraform && which shellcheck && which tflint && which tfsec
