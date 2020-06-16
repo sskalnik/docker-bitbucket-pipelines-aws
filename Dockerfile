@@ -4,7 +4,7 @@ RUN set -xe \
 	&& yum update -y \
 	&& yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
 	&& yum install -y epel-release \
-	&& yum install -y which curl wget git unzip ShellCheck \
+	&& yum install -y jq which curl wget git unzip ShellCheck \
 	&& curl -L "$(curl -Ls https://api.github.com/repos/liamg/tfsec/releases/latest | grep -o -E "https://.+?linux-amd64")" -o /usr/local/bin/tfsec \
 	&& chmod +x /usr/local/bin/tfsec \
 	&& curl -L "$(curl -Ls https://api.github.com/repos/terraform-linters/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" -o tflint.zip \
