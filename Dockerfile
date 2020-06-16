@@ -10,4 +10,6 @@ RUN set -xe \
 	&& curl -L "$(curl -Ls https://api.github.com/repos/terraform-linters/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" -o tflint.zip \
 	&& unzip tflint.zip && rm tflint.zip && mv tflint /usr/local/bin/tflint \
 	&& chmod +x /usr/local/bin/tflint \
-	&& wget https://raw.githubusercontent.com/sskalnik/tf-updater/master/get-latest-terraform.sh -O /usr/local/bin/get-latest-terraform.sh
+	&& wget https://raw.githubusercontent.com/sskalnik/tf-updater/master/get-latest-terraform.sh -O /usr/local/bin/get-latest-terraform.sh \
+	&& chmod +x /usr/local/bin/get-latest-terraform.sh \
+	&& /usr/local/bin/get-latest-terraform.sh
