@@ -1,3 +1,0 @@
-sut:
-  build: .
-  command: for EXECUTABLE in wget curl git unzip terraform shellcheck tflint tfsec; do [ -x "$$(command -v $$EXECUTABLE)" ]; if [[ "$${?}" -ne 0 ]]; then printf "$$EXECUTABLE is not installed, exiting\\n" && exit 1; fi; done
