@@ -1,5 +1,6 @@
 # Bitbucket Pipelines Docker Image for Terraform projects
 ## Essential packages
+* [tar](https://ss64.com/bash/tar.html)
 * [curl](https://curl.haxx.se/)
 * [git](https://git-scm.com/)
 * [jq](https://stedolan.github.io/jq/)
@@ -13,6 +14,8 @@
 * [tfsec](https://github.com/liamg/tfsec/)
 ## Terraform
 * [Terraform](https://www.terraform.io/) via [tf-updater](https://github.com/sskalnik/tf-updater)
+## Go
+* [golang Linux AMD64 1.14.4](https://dl.google.com/go/go1.14.4.linux-amd64.tar.gz)
 
 # Example Usage in Bitbucket Pipelines
 ```
