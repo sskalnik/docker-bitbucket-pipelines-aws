@@ -1,4 +1,5 @@
 # Bitbucket Pipelines Docker Image for Terraform projects
+Latest release on Docker Hub: https://hub.docker.com/repository/docker/sskalnik/bitbucket-pipelines-aws-terraform
 ## Essential packages
 * [tar](https://ss64.com/bash/tar.html)
 * [curl](https://curl.haxx.se/)
