@@ -17,6 +17,8 @@ Latest release on Docker Hub: https://hub.docker.com/repository/docker/sskalnik/
 * [Terraform](https://www.terraform.io/) via [tf-updater](https://github.com/sskalnik/tf-updater)
 ## Go
 * [golang Linux AMD64 1.14.4](https://dl.google.com/go/go1.14.4.linux-amd64.tar.gz)
+## AppStream 2.0 provider
+* [AppStream 2.0 Provider](https://github.com/arnvid/terraform-provider-appstream/tree/master)
 
 # Example Usage in Bitbucket Pipelines
 ```
