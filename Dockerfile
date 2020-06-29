@@ -2,11 +2,11 @@ FROM amazonlinux:latest
 
 RUN set -xe \
 	# && yum clean expire-cache \ # similar to apt-get update; this line clears the cache
-	&& yum clean all 
+	&& yum clean all \
 	&& yum check-update \
 	&& yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
 	&& yum install -y epel-release \
-	&& yum install -y tar jq which curl wget git unzip ShellCheck
+	&& yum install -y tar jq which curl wget git unzip ShellCheck \
 	&& yum clean all
 	
 RUN set -xe \
@@ -26,10 +26,10 @@ RUN set -xe \
 RUN set -xe \
 	&& wget -q https://dl.google.com/go/go1.14.4.linux-amd64.tar.gz \
 	&& tar -C /usr/local -xzf go1.14.4.linux-amd64.tar.gz \
-	&& export PATH=$PATH:/usr/local/bin:/usr/local/go/bin
-  && git clone https://github.com/arnvid/terraform-provider-appstream.git
-  && mkdir -p ~/.terraform.d/plugins/linux_amd64/
-	&& cd terraform-provider-appstream
-  && go build -o ~/.terraform.d/plugins/linux_amd64/terraform-provider-appstream_v1.0.8
+	&& export PATH=$PATH:/usr/local/bin:/usr/local/go/bin \
+	&& git clone https://github.com/arnvid/terraform-provider-appstream.git \
+	&& mkdir -p ~/.terraform.d/plugins/linux_amd64/ \
+	&& cd terraform-provider-appstream \
+	&& go build -o ~/.terraform.d/plugins/linux_amd64/terraform-provider-appstream_v1.0.8
 
 ENTRYPOINT [ "/bin/bash" ]
