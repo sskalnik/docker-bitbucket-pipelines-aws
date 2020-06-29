@@ -1,9 +1,6 @@
 FROM amazonlinux:latest
 
 RUN set -xe \
-	# && yum clean expire-cache \ # similar to apt-get update; this line clears the cache
-	&& yum clean all \
-	&& yum check-update \
 	&& yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
 	&& yum install -y epel-release \
 	&& yum install -y tar jq which curl wget git unzip ShellCheck \
