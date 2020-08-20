@@ -21,8 +21,8 @@ RUN set -xe \
 	&& /usr/local/bin/get-latest-terraform.sh
 
 RUN set -xe \
-	&& wget -q https://dl.google.com/go/go1.14.4.linux-amd64.tar.gz \
-	&& tar -C /usr/local -xzf go1.14.4.linux-amd64.tar.gz \
+	&& wget -q https://golang.org/dl/go1.15.linux-amd64.tar.gz \
+	&& tar -C /usr/local -xzf go1.15.linux-amd64.tar.gz \
 	&& export PATH=$PATH:/usr/local/bin:/usr/local/go/bin \
 	&& git clone https://github.com/arnvid/terraform-provider-appstream.git \
 	&& mkdir -p ~/.terraform.d/plugins/linux_amd64/ \
